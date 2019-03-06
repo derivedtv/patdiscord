@@ -31,6 +31,7 @@ client.channels.get("552646752717766668").send({embed: {
   }
   });
 
+  message.member.send("Welcome to Planet Mxrs! Please read the <#552639989259698182> and be sure to follow them. We are happy to have you, and hope you have a good time!")
   var joinrole = member.guild.roles.find('name', 'Member');
   
   member.addRole(joinrole)
