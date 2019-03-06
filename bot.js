@@ -50,7 +50,7 @@ message.delete();
 if(!message.member.roles.some(r=>["The Bot Himself", ":ok_hand:", "Officer", "Admin", "Head Raid leader"].includes(r.name)) )
 message.delete();
 
-client.channels.get("430525498968506368").send({embed: {
+client.channels.get("552658004135116800").send({embed: {
   color: 0xff040b,
   author: {
     name: "Bot Update",
