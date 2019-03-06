@@ -9,7 +9,7 @@ const weather = require('weather-js');
 client.on('guildMemberAdd', member => {
   
 client.channels.get("552646752717766668").send({embed: {
-    color: 0xFF00FF,
+    color: 0xff040b,
     author: {
       name: `New User | ${member.user.tag}`,
       icon_url: member.user.avatarURL
@@ -51,7 +51,7 @@ if(!message.member.roles.some(r=>["The Bot Himself", ":ok_hand:", "Officer", "Ad
 message.delete();
 
 client.channels.get("552658004135116800").send({embed: {
-  color: 0xFF00FF,
+  color: 0xff040b,
   author: {
     name: "Bot Update",
     icon_url: client.user.avatarURL
@@ -84,7 +84,7 @@ case "!info":
 message.delete();
 
 message.channel.send({embed: {
-  color: 0xFF00FF,
+  color: 0xff040b,
   author: {
     name: "Planet Mxrs Info",
     icon_url: client.user.avatarURL
@@ -155,7 +155,7 @@ return;
 let appid = Math.floor(Math.random() * 10100)
 
 client.channels.get("552647944034058260").send({embed: {
-  color: 0xFF00FF,
+  color: 0xff040b,
   author: {
     name: `Application | ${message.author.tag} `,
     icon_url: message.author.avatarURL
@@ -181,7 +181,7 @@ client.channels.get("552647944034058260").send({embed: {
 message.author.send(`Hello ${message.author}, your form will be sent shortly.\nYour application ID is ${appid}. Send this to a staff member if you feel your application has not yet been checked over.`);
 setTimeout(function(){ 
 message.author.send({embed: {
-  color: 0xFF00FF,
+  color: 0xff040b,
   author: {
     name: `Application Form | ${message.author.tag}`,
     icon_url: message.author.avatarURL,
@@ -214,7 +214,7 @@ return;
 if(announcement)
 client.channels.get('552641454661435402').send("@everyone")
 client.channels.get('552641454661435402').send({embed: {
-  color: 0xFF00FF,
+  color: 0xff040b,
   title: announcement,
   author: {
     name: `Announcement | ${message.author.tag}`,
@@ -256,7 +256,7 @@ return message.reply("**Please include a number of messages to delete! (1-99)**\
 
 message.delete();
 client.channels.get("552647944034058260").send({embed: {
-    color: 0xFF00FF,
+    color: 0xff040b,
     author: {
       name: `Purge | ${message.author.tag} `,
       icon_url: message.author
@@ -295,7 +295,7 @@ let uiembed = new Discord.RichEmbed()
 .setAuthor(message.author.username)
 .setDescription("This is " + message.author.username + "'s info!")
 .setThumbnail(message.author.avatarURL)
-.setColor("0xFF00FF")
+.setColor("0xff040b")
 .addField("Full Username:", `${message.author.username}#${message.author.discriminator}`)
 .addField("User ID:", message.author.id)
 .addField("Created At:", message.author.createdAt);
@@ -334,7 +334,7 @@ message.delete();
 var flip = Math.floor(Math.random() * 2 + 1);
 if (flip === 1) {
   message.reply({embed: {
-    color: 0xFF00FF,
+    color: 0xff040b,
     author: {
       name: `Coinflip | ${message.author.tag}`,
       icon_url: message.author.avatarURL,
@@ -350,7 +350,7 @@ if (flip === 1) {
 }
 else {
   message.reply({embed: {
-    color: 0xFF00FF,
+    color: 0xff040b,
     author: {
       name: `Coinflip | ${message.author.tag}`,
       icon_url: message.author.avatarURL,
@@ -387,7 +387,7 @@ return message.reply("You don't have permissions to use this!")
       member.kick(kreason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
       client.channels.get("552647944034058260").send({embed: {
-        color: 0xFF00FF,
+        color: 0xff040b,
         author: {
           name: `Kick | ${member.user.tag} `,
           icon_url: member.user.avatarURL
@@ -441,7 +441,7 @@ return message.reply("You don't have permissions to use this!")
   bmember.ban(breason)
     .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
     client.channels.get("552647944034058260").send({embed: {
-      color: 0xFF00FF,
+      color: 0xff040b,
       author: {
         name: `Ban | ${bmember.user.tag} `,
         icon_url: bmember.user.avatarURL
@@ -493,7 +493,7 @@ return message.reply("You don't have permissions to use this!")
   
   message.channel.send(`***✅ ${members.user.tag} has been warned.***`);
   client.channels.get("552647944034058260").send({embed: {
-    color: 0xFF00FF,
+    color: 0xff040b,
     author: {
       name: `Warn | ${members.user.tag} `,
       icon_url: members.user.avatarURL
@@ -545,7 +545,7 @@ return message.reply("You don't have permissions to use this!")
   mmembers.addRole("552648099357655053")
   message.channel.send(`***✅ ${mmembers.user.tag} has been muted.***`);
   client.channels.get("552647944034058260").send({embed: {
-    color: 0xFF00FF,
+    color: 0xff040b,
     author: {
       name: `Mute | ${mmembers.user.tag} `,
       icon_url: mmembers.user.avatarURL
@@ -599,7 +599,7 @@ wmmembers.addRole("552648099357655053");
 message.channel.send(`***✅ ${wmmembers.user.tag} has been warned and muted.***`);
     
 client.channels.get("552647944034058260").send({embed: {
-  color: 0xFF00FF,
+  color: 0xff040b,
       author: {
         name: `Warn/Mute | ${wmmembers.user.tag} `,
         icon_url: wmmembers.user.avatarURL
@@ -643,7 +643,7 @@ return message.reply("You don't have permissions to use this!")
 
   message.channel.send(`***✅ ${mmmembers.user.tag} has been unmuted.***`);
   client.channels.get("552647944034058260").send({embed: {
-    color: 0xFF00FF,
+    color: 0xff040b,
     author: {
       name: `Unmute | ${mmmembers.user.tag} `,
       icon_url: mmmembers.user.avatarURL
