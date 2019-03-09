@@ -228,6 +228,28 @@ client.channels.get('552641454661435402').send({embed: {
 })
 break;
 
+case "!blue":
+
+if(message.member.roles.some(r=>["Blue"].includes(r.name)) )
+return message.reply ("You already have the blue color!")
+
+message.delete();
+message.guild.member(message.author).addRole("552701344566214666");
+message.channel.send("The user " + message.author + " was given the color ``Blue``");
+break;
+
+case "!indigo":
+
+message.guild.member(message.author).removeRole("552701344566214666");
+
+if(message.member.roles.some(r=>["Indigo"].includes(r.name)) )
+return message.reply ("You already have the indigo color!")
+
+message.delete();
+message.guild.member(message.author).addRole("552701748565770250");
+message.channel.send("The user " + message.author + " was given the color ``Indigo``");
+break;           
+           
 case "!find":
 message.delete();
 let users = client.users;
