@@ -240,7 +240,7 @@ break;
 
 case "!indigo":
 
-message.guild.member(message.author).removeRole("552701344566214666");
+message.guild.member(message.author).removeRole("552701344566214666", "552701183039373313");
 
 if(message.member.roles.some(r=>["Indigo"].includes(r.name)) )
 return message.reply ("You already have the indigo color!")
