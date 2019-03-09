@@ -228,10 +228,75 @@ client.channels.get('552641454661435402').send({embed: {
 })
 break;
 
+case "!red":
+
+message.guild.member(message.author).removeRole("552700784941465622");
+message.guild.member(message.author).removeRole("552700829103161346");
+message.guild.member(message.author).removeRole("552701129369059328");
+message.guild.member(message.author).removeRole("552701344566214666");
+message.guild.member(message.author).removeRole("552701748565770250");
+message.guild.member(message.author).removeRole("552702220257198081");
+message.guild.member(message.author).removeRole("552701183039373313");
+
+message.delete();
+message.guild.member(message.author).addRole("552700784941465622");
+message.channel.send("The user " + message.author + " was given the color ``Red``");
+break;
+
+case "!orange":
+
+message.guild.member(message.author).removeRole("552700784941465622");
+message.guild.member(message.author).removeRole("552700829103161346");
+message.guild.member(message.author).removeRole("552701129369059328");
+message.guild.member(message.author).removeRole("552701344566214666");
+message.guild.member(message.author).removeRole("552701748565770250");
+message.guild.member(message.author).removeRole("552702220257198081");
+message.guild.member(message.author).removeRole("552701183039373313");
+
+message.delete();
+message.guild.member(message.author).addRole("552700829103161346");
+message.channel.send("The user " + message.author + " was given the color ``Orange``");
+break;
+
+case "!yellow":
+
+message.guild.member(message.author).removeRole("552700784941465622");
+message.guild.member(message.author).removeRole("552700829103161346");
+message.guild.member(message.author).removeRole("552701129369059328");
+message.guild.member(message.author).removeRole("552701344566214666");
+message.guild.member(message.author).removeRole("552701748565770250");
+message.guild.member(message.author).removeRole("552702220257198081");
+message.guild.member(message.author).removeRole("552701183039373313");
+
+message.delete();
+message.guild.member(message.author).addRole("552701129369059328");
+message.channel.send("The user " + message.author + " was given the color ``Yellow``");
+break;
+
+case "!green":
+
+message.guild.member(message.author).removeRole("552700784941465622");
+message.guild.member(message.author).removeRole("552700829103161346");
+message.guild.member(message.author).removeRole("552701129369059328");
+message.guild.member(message.author).removeRole("552701344566214666");
+message.guild.member(message.author).removeRole("552701748565770250");
+message.guild.member(message.author).removeRole("552702220257198081");
+message.guild.member(message.author).removeRole("552701183039373313");
+
+message.delete();
+message.guild.member(message.author).addRole("552701183039373313");
+message.channel.send("The user " + message.author + " was given the color ``Green``");
+break;
+
 case "!blue":
 
-if(message.member.roles.some(r=>["Blue"].includes(r.name)) )
-return message.reply ("You already have the blue color!")
+message.guild.member(message.author).removeRole("552700784941465622");
+message.guild.member(message.author).removeRole("552700829103161346");
+message.guild.member(message.author).removeRole("552701129369059328");
+message.guild.member(message.author).removeRole("552701344566214666");
+message.guild.member(message.author).removeRole("552701748565770250");
+message.guild.member(message.author).removeRole("552702220257198081");
+message.guild.member(message.author).removeRole("552701183039373313");
 
 message.delete();
 message.guild.member(message.author).addRole("552701344566214666");
@@ -240,7 +305,13 @@ break;
 
 case "!indigo":
 
-message.guild.member(message.author).removeRole("552701344566214666", "552701183039373313");
+message.guild.member(message.author).removeRole("552700784941465622");
+message.guild.member(message.author).removeRole("552700829103161346");
+message.guild.member(message.author).removeRole("552701129369059328");
+message.guild.member(message.author).removeRole("552701344566214666");
+message.guild.member(message.author).removeRole("552701748565770250");
+message.guild.member(message.author).removeRole("552702220257198081");
+message.guild.member(message.author).removeRole("552701183039373313");
 
 if(message.member.roles.some(r=>["Indigo"].includes(r.name)) )
 return message.reply ("You already have the indigo color!")
@@ -248,7 +319,22 @@ return message.reply ("You already have the indigo color!")
 message.delete();
 message.guild.member(message.author).addRole("552701748565770250");
 message.channel.send("The user " + message.author + " was given the color ``Indigo``");
-break;           
+break;
+
+case "!violet":
+
+message.guild.member(message.author).removeRole("552700784941465622");
+message.guild.member(message.author).removeRole("552700829103161346");
+message.guild.member(message.author).removeRole("552701129369059328");
+message.guild.member(message.author).removeRole("552701344566214666");
+message.guild.member(message.author).removeRole("552701748565770250");
+message.guild.member(message.author).removeRole("552702220257198081");
+message.guild.member(message.author).removeRole("552701183039373313");
+
+message.delete();
+message.guild.member(message.author).addRole("552702220257198081");
+message.channel.send("The user " + message.author + " was given the color ``Violet``");
+break;    
            
 case "!find":
 message.delete();
