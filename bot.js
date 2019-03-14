@@ -5,6 +5,62 @@ const prefix = '!';
 const ownerid =  "160140367554019329"
 const snekfetch = require("snekfetch");
 const weather = require('weather-js');
+const setupCMD = "!createrolemessage"
+
+let initialMessage = `**React to the messages below to receive the associated notification role. If you would like to remove the role, simply remove your reaction!**\nThese roles will base what you get pinged for.`;
+const roles = ["Bot Notifications", "Announcements", "Miscellaneous"];
+const reactions = ["555883672428085259", "555883760869179412", "555883733597814795"];
+if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
+
+function generateMessages(){
+  var messages = [];
+  messages.push(initialMessage);
+  for (let role of roles) messages.push(`React below to get the **"${role}"** role!`); //DONT CHANGE THIS
+  return messages;
+}
+
+client.on("message", message => {
+  if (message.author.id == "160140367554019329" && message.content.toLowerCase() == setupCMD){
+      var toSend = generateMessages();
+      let mappedArray = [[toSend[0], false], ...toSend.slice(1).map( (message, idx) => [message, reactions[idx]])];
+      for (let mapObj of mappedArray){
+          message.channel.send(mapObj[0]).then( sent => {
+              if (mapObj[1]){
+                sent.react(mapObj[1]);  
+              } 
+          });
+      }
+  }
+})
+
+
+client.on('raw', event => {
+  if (event.t === 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
+      
+      let channel = client.channels.get(event.d.channel_id);
+      let message = channel.fetchMessage(event.d.message_id).then(msg=> {
+      let user = msg.guild.members.get(event.d.user_id);
+      
+      if (msg.author.id == client.user.id && msg.content != initialMessage){
+     
+          var re = `\\*\\*"(.+)?(?="\\*\\*)`;
+          var role = msg.content.match(re)[1];
+      
+          if (user.id != client.user.id){
+              var roleObj = msg.guild.roles.find('name', role);
+              var memberObj = msg.guild.members.get(user.id);
+              
+              if (event.t === "MESSAGE_REACTION_ADD"){
+                  memberObj.addRole(roleObj)
+              } else {
+                  memberObj.removeRole(roleObj);
+              }
+          }
+      }
+      })
+
+  }   
+});
 
 client.on('guildMemberAdd', member => {
   
