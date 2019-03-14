@@ -9,7 +9,7 @@ const setupCMD = "!createrolemessage"
 
 let initialMessage = `**React to the messages below to receive the associated notification role. If you would like to remove the role, simply remove your reaction!**\nThese roles will base what you get pinged for.`;
 const roles = ["Bot Notifications", "Announcements", "Miscellaneous"];
-const reactions = ["555883672428085259", "555883760869179412", "555883733597814795"];
+const reactions = ["⚙", "❗", "❓"];
 if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
 
 function generateMessages(){
