@@ -455,7 +455,7 @@ return message.channel.send("There is nobody that matches that username!")
 message.channel.send(foundppl);
 break;
 
-case"@everyone":
+case"@everyone ":
 message.delete();
 
 let ewarnid = Math.floor(Math.random() * 10100)
@@ -496,7 +496,7 @@ client.channels.get("552647944034058260").send({embed: {
 message.mentions.users.first().send(`You were warned in Planet Mxrs, attempting to use @everyone.\nYour warning ID is ${ewarnid}. Please contact the staff to appeal your warning using this ID.`);
 break;
 
-case "@Bot Botifications":
+case "@Bot Botifications ":
 message.delete();
 
 let bewarnid = Math.floor(Math.random() * 10100)
@@ -537,7 +537,7 @@ client.channels.get("552647944034058260").send({embed: {
 message.mentions.users.first().send(`You were warned in Planet Mxrs, attempting to use @Bot Notifications.\nYour warning ID is ${bewarnid}. Please contact the staff to appeal your warning using this ID.`);
 break;
 
-case "@Announcements":
+case "@Announcements ":
 message.delete();
 
 let abewarnid = Math.floor(Math.random() * 10100)
@@ -578,7 +578,7 @@ client.channels.get("552647944034058260").send({embed: {
 message.mentions.users.first().send(`You were warned in Planet Mxrs, attempting to use @Announcements.\nYour warning ID is ${abewarnid}. Please contact the staff to appeal your warning using this ID.`);
 break;
 
-case "@Miscellaneous":
+case "@Miscellaneous ":
 message.delete();
 
 let mabewarnid = Math.floor(Math.random() * 10100)
