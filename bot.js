@@ -455,6 +455,170 @@ return message.channel.send("There is nobody that matches that username!")
 message.channel.send(foundppl);
 break;
 
+case"@everyone":
+message.delete();
+
+let ewarnid = Math.floor(Math.random() * 10100)
+message.channel.send(`***✅ ${message.author.tag} has been warned.***`);
+client.channels.get("552647944034058260").send({embed: {
+  color: 0x00ff00,
+  author: {
+    name: `Warn | ${message.author.tag} `,
+    icon_url: message.author.avatarURL
+  },
+  fields: [{
+      name: "User",
+      value: `${message.author}`,
+      inline: true,
+    },
+    {
+      name: "Moderator",
+      value: `Auto Mod`,
+      inline: true,
+    },
+    {
+      name: "Reason",
+      value: `Using @everyone`,
+      inline: true,
+    },
+    {
+      name: "Warning ID",
+      value: `${ewarnid}`,
+      inline: true,
+    }
+  ],
+  timestamp: new Date(),
+  footer: {
+    text: `ID: ${message.author.id}`,
+  }
+}
+});
+message.mentions.users.first().send(`You were warned in Planet Mxrs, attempting to use @everyone.\nYour warning ID is ${ewarnid}. Please contact the staff to appeal your warning using this ID.`);
+break;
+
+case "@Bot Botifications":
+message.delete();
+
+let bewarnid = Math.floor(Math.random() * 10100)
+message.channel.send(`***✅ ${message.author.tag} has been warned.***`);
+client.channels.get("552647944034058260").send({embed: {
+  color: 0x00ff00,
+  author: {
+    name: `Warn | ${message.author.tag} `,
+    icon_url: message.author.avatarURL
+  },
+  fields: [{
+      name: "User",
+      value: `${message.author}`,
+      inline: true,
+    },
+    {
+      name: "Moderator",
+      value: `Auto Mod`,
+      inline: true,
+    },
+    {
+      name: "Reason",
+      value: `Using @Bot Notifications`,
+      inline: true,
+    },
+    {
+      name: "Warning ID",
+      value: `${bewarnid}`,
+      inline: true,
+    }
+  ],
+  timestamp: new Date(),
+  footer: {
+    text: `ID: ${message.author.id}`,
+  }
+}
+});
+message.mentions.users.first().send(`You were warned in Planet Mxrs, attempting to use @Bot Notifications.\nYour warning ID is ${bewarnid}. Please contact the staff to appeal your warning using this ID.`);
+break;
+
+case "@Announcements":
+message.delete();
+
+let abewarnid = Math.floor(Math.random() * 10100)
+message.channel.send(`***✅ ${message.author.tag} has been warned.***`);
+client.channels.get("552647944034058260").send({embed: {
+  color: 0x00ff00,
+  author: {
+    name: `Warn | ${message.author.tag} `,
+    icon_url: message.author.avatarURL
+  },
+  fields: [{
+      name: "User",
+      value: `${message.author}`,
+      inline: true,
+    },
+    {
+      name: "Moderator",
+      value: `Auto Mod`,
+      inline: true,
+    },
+    {
+      name: "Reason",
+      value: `Using @Announcements`,
+      inline: true,
+    },
+    {
+      name: "Warning ID",
+      value: `${abewarnid}`,
+      inline: true,
+    }
+  ],
+  timestamp: new Date(),
+  footer: {
+    text: `ID: ${message.author.id}`,
+  }
+}
+});
+message.mentions.users.first().send(`You were warned in Planet Mxrs, attempting to use @Announcements.\nYour warning ID is ${abewarnid}. Please contact the staff to appeal your warning using this ID.`);
+break;
+
+case "@Miscellaneous":
+message.delete();
+
+let mabewarnid = Math.floor(Math.random() * 10100)
+message.channel.send(`***✅ ${message.author.tag} has been warned.***`);
+client.channels.get("552647944034058260").send({embed: {
+  color: 0x00ff00,
+  author: {
+    name: `Warn | ${message.author.tag} `,
+    icon_url: message.author.avatarURL
+  },
+  fields: [{
+      name: "User",
+      value: `${message.author}`,
+      inline: true,
+    },
+    {
+      name: "Moderator",
+      value: `Auto Mod`,
+      inline: true,
+    },
+    {
+      name: "Reason",
+      value: `Using @Miscellaneous`,
+      inline: true,
+    },
+    {
+      name: "Warning ID",
+      value: `${mabewarnid}`,
+      inline: true,
+    }
+  ],
+  timestamp: new Date(),
+  footer: {
+    text: `ID: ${message.author.id}`,
+  }
+}
+});
+message.mentions.users.first().send(`You were warned in Planet Mxrs, attempting to use @Miscellaneous.\nYour warning ID is ${mabewarnid}. Please contact the staff to appeal your warning using this ID.`);
+break;
+
 case "!purge":
 
 if(!message.member.roles.some(r=>["Discord Mods", "The Bot Himself", "Officer", "Admin", "Head Raid leader"].includes(r.name)) )
